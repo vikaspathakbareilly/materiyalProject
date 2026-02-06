@@ -1,0 +1,43 @@
+<button mat-raised-button color="primary">Home Button</button>
+<button mat-fab color="accent" aria-label="Example icon button with a heart icon">
+  <mat-icon>favorite</mat-icon>
+</button> asdsefrgrgtr
+<mat-selection-list [multiple]="false">
+    <mat-list-option value="1">
+        <mat-icon matListItemIcon>person</mat-icon>
+        <div matListItemTitle>User One</div>
+        <div matListItemLine>Admin Role</div>
+    </mat-list-option>
+    <mat-divider></mat-divider>
+    <mat-list-option value="2">
+        <mat-icon matListItemIcon>person</mat-icon>
+        <div matListItemTitle>User Two</div>
+        <div matListItemLine>Editor Role</div>
+    </mat-list-option>
+</mat-selection-list>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+            <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

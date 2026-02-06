@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+}
+
+.mat-elevation-z8 {
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
